@@ -5,9 +5,7 @@
 num_part = 15
 num_paint = 9
 part = 3
-# то, что каждая деталь будет окрашенной - независимое и совместимое событие,
-# поэтому для расчета вероятности используем произведение вероятности событий
-# вероятность событий определяем как отношение благоприятных исходов (количество окрашенных деталей) к общему количеству
-all_paint_probability = (num_paint/num_part)**part
+
+all_paint_probability = (num_paint/num_part)*((num_paint-1)/(num_part-1))*((num_paint-2)/(num_part-2))
 print(f'Вероятность того, что все извлеченные детали окрашены - '
       f'{round(all_paint_probability, 4)} или {round(all_paint_probability * 100, 2)}%')
