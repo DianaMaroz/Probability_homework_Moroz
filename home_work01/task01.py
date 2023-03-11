@@ -3,7 +3,7 @@
 # б) Найти вероятность, что среди 4-х карт окажется хотя бы один туз.
 
 import main
-import math
+
 num_card = 52
 num_clubs = 13
 card = 4
