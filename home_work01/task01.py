@@ -7,10 +7,10 @@ import main
 num_card = 52
 num_clubs = 13
 card = 4
-# то, что каждая карта крести - независимое и совместимое событие,
-# поэтому для расчета вероятности используем произведение вероятности событий
-# вероятность событий определяем как отношение благоприятных исходов (количество карт крести) к общему количеству (количество карт в колоде)
-all_clubs_probability = (num_clubs/num_card)**card
+
+all_clubs_probability = 1
+for i in range(card):
+      all_clubs_probability *= (num_clubs - i)/(num_card - i)
 print(f'Вероятность того, что все 4 карты крести - '
       f'{round(all_clubs_probability, 4)} или {round(all_clubs_probability * 100, 2)}%')
 
