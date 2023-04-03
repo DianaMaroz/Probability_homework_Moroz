@@ -13,4 +13,4 @@ x_std = 0.71
 y_std = 0.73
 t = (x_mean - y_mean)/(np.sqrt((x_std**2/200 + y_std**2/200)))
 print(t)
-print(stats.t.ppf(0.975, 398))
+print(stats.t.ppf(0.975, 40))
